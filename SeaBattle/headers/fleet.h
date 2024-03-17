@@ -1,11 +1,12 @@
 #pragma once
 #include <vector>
+#include <memory>
 #include "ship.h"
 
 class Fleet {
-  std::vector<std::vector<IShip>> fleet;
+  std::vector<std::vector<std::shared_ptr<IShip>>> fleet;
 
  public:
   explicit Fleet();
-  std::vector<IShip> operator[](size_t ind);
+  std::vector<std::shared_ptr<IShip>> operator[](size_t ind);
 };

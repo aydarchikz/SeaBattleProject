@@ -17,4 +17,8 @@ add_executable(
         headers/square.h
         source/player.cpp
         headers/player.h
+        source/factory.cpp
+        headers/factory.h
+        headers/iship.h
+        source/iship.cpp
 )

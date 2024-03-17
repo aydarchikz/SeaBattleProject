@@ -8,5 +8,7 @@ void Player::Registration() {
   std::cout << "Введите пароль для подтверждения хода.\n";
   std::cin >> password;
   system("clear");
-
+  for (int i = 0; i < 4; ++i) {
+    fleet[0].push_back(std::shared_ptr<IShip>(new SingleDeckShip(field.field)));
+  }
 }

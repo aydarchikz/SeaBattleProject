@@ -1,14 +1,11 @@
 #pragma once
-#include <memory>
 #include <vector>
+#include <memory>
 #include "square.h"
 
-struct Square;
-
 class Field {
-  std::vector<std::vector<Square>> field;
-
  public:
+  std::vector<std::vector<std::shared_ptr<Square>>> field;
   explicit Field();
-  std::vector<Square> operator[] (size_t ind) const;
+  std::vector<std::shared_ptr<Square>> operator[](size_t ind) const;
 };

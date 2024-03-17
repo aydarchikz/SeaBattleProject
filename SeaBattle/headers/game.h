@@ -8,4 +8,5 @@ class Game {
 
  public:
   void RegistrationPlayers();
+  void Play();
 };
