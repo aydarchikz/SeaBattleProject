@@ -2,13 +2,13 @@
 
 bool CorrectInput(std::string input) {
   if (input.size() < 2 || input.size() > 3 || input[0] - 'A' > 9 || 'A' - input[0] > 0 || !isdigit(input[1]) ||
-      (input.size() == 3 && input[1] != '1' && input[2] != '0')) {
+      (input[1] == 0) || (input.size() == 3 && input[1] != '1' && !isdigit(input[2]) && input[2] != '0')) {
     return false;
   }
   return true;
 }
 
-bool IsAvailable(std::pair<int, int> coordinates, std::vector<std::vector<std::shared_ptr<Square>>>& field) {
+bool IsAvailable(std::pair<int, int> coordinates, Field& field) {
   for (int i = coordinates.first - 1; i <= coordinates.first + 1; ++i) {
     for (int j = coordinates.second - 1; j <= coordinates.second + 1; ++j) {
       if (i >= 0 && i < 10 && j >= 0 && j < 10 && (*field[i][j]).is_ship != 0) {
@@ -19,7 +19,7 @@ bool IsAvailable(std::pair<int, int> coordinates, std::vector<std::vector<std::s
   return true;
 }
 
-void ShipCreator::FactoryMethod(int count_deck, IShip* ship, std::vector<std::vector<std::shared_ptr<Square>>>& field) {
+void ShipCreator::FactoryMethod(int n_deck, IShip* ship, Field& field) {
   std::cout << "Введите координаты однопалубного корабля. Необходимый формат: [A-J][1-10]\n";
   std::string input;
   std::cin >> input;

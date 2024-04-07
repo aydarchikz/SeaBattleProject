@@ -4,8 +4,9 @@
 #include "square.h"
 
 class Field {
- public:
   std::vector<std::vector<std::shared_ptr<Square>>> field;
+
+ public:
   explicit Field();
-  std::vector<std::shared_ptr<Square>> operator[](size_t ind) const;
+  std::vector<std::shared_ptr<Square>> operator[](size_t ind);
 };

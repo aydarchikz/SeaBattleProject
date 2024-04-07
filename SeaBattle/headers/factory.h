@@ -4,5 +4,5 @@
 
 class ShipCreator {
  public:
-  static void FactoryMethod(int count_deck, IShip* ship, std::vector<std::vector<std::shared_ptr<Square>>>& field);
+  static void FactoryMethod(int n_deck, IShip* ship, Field& field);
 };

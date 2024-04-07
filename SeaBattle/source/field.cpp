@@ -9,6 +9,6 @@ Field::Field() : field(10) {
   }
 }
 
-std::vector<std::shared_ptr<Square>> Field::operator[](size_t ind) const {
+std::vector<std::shared_ptr<Square>> Field::operator[](size_t ind){
   return field[ind];
 }

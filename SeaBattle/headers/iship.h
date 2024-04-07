@@ -7,4 +7,5 @@ class IShip {
  public:
   std::vector<std::shared_ptr<Square>> ship;
   virtual ~IShip() = 0;
+  bool IsKilled(Field& field);
 };

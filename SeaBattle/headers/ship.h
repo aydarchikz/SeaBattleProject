@@ -6,24 +6,24 @@
 
 class SingleDeckShip : public IShip {
  public:
-  explicit SingleDeckShip(std::vector<std::vector<std::shared_ptr<Square>>>& field);
+  explicit SingleDeckShip(Field& field);
   ~SingleDeckShip() override = default;
 };
 
 class DoubleDeckShip : public IShip {
  public:
-  explicit DoubleDeckShip(std::vector<std::vector<std::shared_ptr<Square>>>& field);
+  explicit DoubleDeckShip(Field& field);
   ~DoubleDeckShip() override = default;
 };
 
 class ThreeDeckShip : public IShip {
  public:
-  explicit ThreeDeckShip(std::vector<std::vector<std::shared_ptr<Square>>>& field);
+  explicit ThreeDeckShip(Field& field);
   ~ThreeDeckShip() override = default;
 };
 
 class FourDeckShip : public IShip {
  public:
-  explicit FourDeckShip(std::vector<std::vector<std::shared_ptr<Square>>>& field);
+  explicit FourDeckShip(Field& field);
   ~FourDeckShip() override = default;
 };

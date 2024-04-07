@@ -12,3 +12,21 @@ void Game::RegistrationPlayers() {
   player2.Registration();
   std::cout << "Регистрация успешно завершена!\n";
 }
+
+void Game::Play() {
+  std::cout << "Для начала игры нажмите Enter\n";
+  for (char c; c != '\n'; c = getchar());
+  system("clear");
+  bool player1_turn = true;
+  while (!player1.IsLose() && !player2.IsLose()) {
+    if (player1_turn) {
+      if (!player1.Move(player2)) {
+        player1_turn = false;
+      }
+    } else {
+      if (!player2.Move(player1)) {
+        player1_turn = true;
+      }
+    }
+  }
+}

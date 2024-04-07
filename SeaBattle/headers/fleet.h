@@ -9,4 +9,5 @@ class Fleet {
  public:
   explicit Fleet();
   std::vector<std::shared_ptr<IShip>> operator[](size_t ind);
+  bool IsKilled(Field& field);
 };

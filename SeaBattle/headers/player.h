@@ -11,4 +11,6 @@ struct Player {
 
   explicit Player() = default;
   void Registration();
+  bool IsLose();
+  bool Move(Player& other);
 };
