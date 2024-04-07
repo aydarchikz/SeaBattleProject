@@ -9,4 +9,5 @@ class Field {
  public:
   explicit Field();
   std::vector<std::shared_ptr<Square>> operator[](size_t ind);
+  void Print(bool is_play);
 };

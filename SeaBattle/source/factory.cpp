@@ -20,6 +20,7 @@ bool IsAvailable(std::pair<int, int> coordinates, Field& field) {
 }
 
 void ShipCreator::FactoryMethod(int n_deck, IShip* ship, Field& field) {
+  field.Print(false);
   std::cout << "Введите координаты однопалубного корабля. Необходимый формат: [A-J][1-10]\n";
   std::string input;
   std::cin >> input;

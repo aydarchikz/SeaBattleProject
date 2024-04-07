@@ -2,10 +2,6 @@
 
 IShip::~IShip() = default;
 
-bool IShip::IsKilled() {
-  return false;
-}
-
 bool IShip::IsKilled(Field &field) {
   for (size_t i = 0; i < ship.size(); ++i) {
     if (!ship[i]->is_shot) {
